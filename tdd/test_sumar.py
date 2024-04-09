@@ -34,8 +34,12 @@ def test_sumar_uno():
 def test_sumar_dos_comas():
     numeros = "5,3"
     assert sumar(numeros) == 8
+    numeros = "8,7"
+    assert sumar(numeros) == 15
 
 
 def test_sumar_tres_comas():
     numeros = "3,8,7"
     assert sumar(numeros) == 18
+    numeros = "3,8,9"
+    assert sumar(numeros) == 20
