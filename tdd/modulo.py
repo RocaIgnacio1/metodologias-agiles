@@ -6,12 +6,9 @@ def sumar(numeros):
     if numeros.startswith('//') and numeros[3] == '\n':
         sep = numeros[2]
         start = 4
-    for c in numeros[start:]:
-        if c in [sep, '\n']:
-            res += int(s)
-            s = ''
-        else:
-            s += c
-    if s != '':
-        res += int(s)
-    return res
+    nums = []
+    for sub in numeros[start:].split(sep):
+        for n in sub.split('\n'):
+            if n != '':
+                nums.append(n)
+    return sum([int(n) for n in nums])
