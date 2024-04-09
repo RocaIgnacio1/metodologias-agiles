@@ -52,3 +52,14 @@ def test_sumar_nueva_linea():
     assert sumar(numeros) == 18
     numeros = "1\n2\n3"
     assert sumar(numeros) == 6
+
+
+def test_sumar_separador():
+    numeros = "//;\n1;2;4;5;6"
+    assert sumar(numeros) == 18
+    numeros = "//|\n1|2|4|5|6"
+    assert sumar(numeros) == 18
+    numeros = "//;\n1;2;3"
+    assert sumar(numeros) == 6
+    numeros = "//|\n1|2|3"
+    assert sumar(numeros) == 6
