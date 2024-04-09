@@ -43,3 +43,12 @@ def test_sumar_tres_comas():
     assert sumar(numeros) == 18
     numeros = "3,8,9"
     assert sumar(numeros) == 20
+
+
+def test_sumar_nueva_linea():
+    numeros = "1,2,4\n5,6"
+    assert sumar(numeros) == 18
+    numeros = "1\n2,4\n5,6"
+    assert sumar(numeros) == 18
+    numeros = "1\n2\n3"
+    assert sumar(numeros) == 6

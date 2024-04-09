@@ -2,7 +2,7 @@ def sumar(numeros):
     res = 0
     s = ''
     for c in numeros:
-        if c == ',':
+        if c in [',', '\n']:
             res += int(s)
             s = ''
         else:
