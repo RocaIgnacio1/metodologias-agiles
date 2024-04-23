@@ -1,6 +1,9 @@
 class Juego:
+    def __init__(self):
+        self._score = 0
+
     def tirar(self, pinos):
-        pass
+        self._score += pinos
 
     def score(self):
-        return 0
+        return self._score
