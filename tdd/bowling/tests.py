@@ -13,3 +13,13 @@ def test_unos():
     for i in range(20):
         j.tirar(1)
     assert j.score() == 20
+
+
+def test_spare():
+    j = Juego()
+    for i in range(20):
+        if i == 11:
+            j.tirar(9)
+        else:
+            j.tirar(1)
+    assert j.score() == 29
