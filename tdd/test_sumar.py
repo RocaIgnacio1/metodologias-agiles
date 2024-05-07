@@ -33,7 +33,7 @@ def test_sumar_uno():
 
 def test_sumar_dos_comas():
     numeros = "5,3"
-    assert sumar(numeros) == 7
+    assert sumar(numeros) == 8
     numeros = "8,7"
     assert sumar(numeros) == 15
 
